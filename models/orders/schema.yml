@@ -1,0 +1,19 @@
+
+version: 2
+
+sources:
+    - name: bigquery_source
+      database: data-engineering-509422
+      schema: staging
+      tables: 
+        - name: orders
+
+models:
+    - name: transformed_orders
+      description: "This is a new table with 2 required columns for reporting purposes"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
