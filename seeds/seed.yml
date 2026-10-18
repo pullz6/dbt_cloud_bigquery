@@ -1,0 +1,30 @@
+
+version: 2
+
+seeds: 
+  - name: customer_details 
+    description: "Customer personal details are stored here"
+    columns: 
+      - name: customer_id
+        tests:
+            - unique
+            - not_null
+
+      - name: first_name
+        tests:
+            - not_null
+
+      - name: last_name
+        tests:
+            - not_null
+
+      - name: date_of_birth
+        tests:
+            - not_null
+
+      - name: postcode
+        tests:
+            - not_null
+
+
+  
