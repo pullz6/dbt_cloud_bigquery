@@ -1,0 +1,13 @@
+version: 2
+
+models:
+    - name: customers
+      description: "This is a new table related to customer details"
+      config:
+        alias: customers_fact
+      columns:
+          - name: customer_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
